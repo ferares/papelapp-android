@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="launcherName">Papelapp.dev</string>
+  <string name="hostName">dev.ares.uy</string>
+  <string name="launchUrl">https://dev.ares.uy/</string>
+  <string name="webManifestUrl">https://dev.ares.uy/manifest.webmanifest</string>
+  <string name="fullScopeUrl">https://dev.ares.uy/</string>
+  <string name="providerAuthority">uy.ares.papelapp.twa.dev.fileprovider</string>
+  <!--
+    This variable below expresses the relationship between the app and the site,
+    as documented in the TWA documentation at
+    https://developers.google.com/web/updates/2017/10/using-twa#set_up_digital_asset_links_in_an_android_app
+    and is injected into the AndroidManifest.xml
+  -->
+  <string name="assetStatements" translatable="false">
+    [{
+        \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+        \"target\": {
+            \"namespace\": \"web\",
+            \"site\": \"https://dev.ares.uy\"
+        }
+    }]
+  </string>
+</resources>

@@ -14,16 +14,25 @@ android {
         applicationId = "uy.ares.papelapp.twa"
         minSdk = 23
         targetSdk = 37
-        versionCode = 4
-        versionName = "1.0.0.3"
+        versionCode = 5
+        versionName = "1.0.0.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    flavorDimensions += "env"
+    productFlavors {
+        create("dev") {
+            dimension = "env"
+            applicationIdSuffix = ".dev"
+        }
+        create("prod") {
+            dimension = "env"
+        }
+    }
     buildTypes {
         release {
             optimization {
-                enable = false
+                enable = true
             }
         }
     }
